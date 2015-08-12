@@ -74,12 +74,13 @@
  </para>
 -->
 <para>
-  有一种解决方案是仅允许单独的一台"主"服务器修改数据，
-  可以修改数据的服务器称为只读/写，<firstterm>master</>或者<firstterm>primary</>服务器。
-  跟踪“主”服务器数据变化的叫<firstterm>备</>
-  或者<firstterm>从</>服务器。
-  备用服务器不能连接到主服务器，直到它晋升为<firstterm>热备</>服务器。
-  可以接受连接而且只读服务器称为<firstterm>热备</>服务器。
+  有一种解决方案是只允许一台服务器修改数据 —— 可以修改数据的服务器称为
+  可读/写，<firstterm>master</>或者<firstterm>primary</>服务器（主服务器）。
+  跟踪"主"服务器数据变化的服务器称为<firstterm>standby</>
+  或者<firstterm>slave</>服务器（备服务器）。
+  如果备服务器不允许客户端连接，除非它被提升为主服务器，这类备服务器称为
+  <firstterm>warm standby</>服务器。另外一种备服务器允许客户端连接但只允许
+  做只读查询，这类备服务器称为<firstterm>hot standby</>服务器。
 </para>
 
  <!--
